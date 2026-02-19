@@ -1,0 +1,125 @@
+@charset "utf-8";
+@font-face{
+	font-family: Fraunces;
+	src: url("fonts/Fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf");
+	font-weight: 700;
+}
+@font-face{
+	font-family: Montserrat;
+	src: url("fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+	font-weight: 500, 700;
+}
+:root{
+	--clr-primary-500: hsl(158, 36%, 37%);
+	--clr-primary-700: hsl(158, 42%, 18%);
+	--clr-black: hsl(212, 21%, 14%);
+	--clr-grey: hsl(228, 12%, 48%);
+	--clr-cream: hsl(30, 38%, 92%);
+	--clr-white: hsl(0, 0%, 100%);
+	--radius: 10px;
+}
+p, del{
+	font-family: Montserrat;
+	color: hsl(228, 12%, 48%);
+}
+h1, span{
+	font-family: Fraunces;
+	color: hsl(212, 21%, 14%);
+	font-size: clamp(1.5rem, 1rem + 1.5vw, 1.99rem);
+}
+body{
+	background-color: var(--clr-cream);
+	font-size: 14px;
+	min-height: 100dvh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 0px;
+}
+.card{
+	background-color: var(--clr-white);
+	display: grid;
+	flex-direction: row;
+	width: 600px;
+	border-radius: var(--radius);
+	grid-template-columns: repeat(2,1fr);
+}
+.img1{
+	height: auto;
+	display: block;
+	border-radius: 10px 0px 0px 10px;
+	width: 100%;
+}
+.text{
+	padding: 15px 30px 15px 30px;
+}
+.thead{
+	letter-spacing: 5px;
+}
+.sprice{
+	color: var(--clr-primary-500);
+}
+.pprice{
+	font-size: .9rem;
+	padding: 0px 0px 0px 20px;
+}
+button{
+	background-color: var(--clr-primary-500);
+	color: var(--clr-white);
+	padding: 10px;
+	border: 0px;
+	width: 240px;
+	cursor: pointer;
+	margin-top: 40px;
+	margin-bottom: 00px;
+	border-radius: var(--radius);
+	height: 45px;
+	font-family: Montserrat;
+	color: var(--clr-white);
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.1rem;
+	transition: all .2s;
+}
+button img{
+	display: inline-block;
+	padding-right: 10px;
+}
+button:hover{
+	background-color: var(--clr-primary-700);
+}
+footer{
+	text-align: center;
+}
+footer div p a{
+	text-decoration: none;
+	font-weight: bold;
+}
+footer div p a:hover{
+	color: hsla(252,74%,58%,1.00);
+}
+@media screen and (max-width: 768px){
+	.card{
+	width: 400px;
+	border-radius: 10px 10px 10px 10px;
+	grid-template-columns: repeat(1,1fr);
+}
+	.img1{
+		border-radius: 10px 10px 0px 0px;
+}
+	button{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 430px){
+	.card{
+	width: 330px;
+	border-radius: 0px 0px 10px 10px;
+	grid-template-columns: repeat(1,1fr);
+	border-radius: 10px 10px 10px 10px;
+}
+	footer div{
+		margin: 15px;
+	}
+}
